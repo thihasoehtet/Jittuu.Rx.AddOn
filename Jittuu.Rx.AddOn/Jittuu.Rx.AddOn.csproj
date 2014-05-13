@@ -59,6 +59,7 @@
     <Compile Include="Observable.DoOnError.cs" />
     <Compile Include="Observable.RetryIf.cs" />
     <Compile Include="Observable.TaskSubscription.cs" />
+    <Compile Include="Observable.WithLatest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
