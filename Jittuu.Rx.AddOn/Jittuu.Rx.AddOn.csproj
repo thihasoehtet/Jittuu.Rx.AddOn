@@ -58,6 +58,7 @@
     <Compile Include="Observable.DelayError.cs" />
     <Compile Include="Observable.DoOnError.cs" />
     <Compile Include="Observable.RetryIf.cs" />
+    <Compile Include="Observable.TaskSubscription.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
