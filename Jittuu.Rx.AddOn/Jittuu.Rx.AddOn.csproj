@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Observable.CompleteWhen.cs" />
+    <Compile Include="Observable.DelayComplete.cs" />
+    <Compile Include="Observable.DelayError.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
