@@ -5,29 +5,18 @@ namespace Jittuu.Rx.AddOn
 {
     public static class ObservableTaskSubscription
     {
-        public static IDisposable Subscribe<T>(this IObservable<T> source, Func<T, Task> onNext, IObserver<Exception> errorObserver)
+        public static IDisposable Subscribe<T>(this IObservable<T> source, Func<T, Task> onNext, Action<Exception> onError)
         {
             Action<T> action = v =>
             {
-                onNext(v).ContinueWith(t =>
-                {
-                    var ae = t.Exception as AggregateException;
-                    if (ae != null)
-                    {
-                        foreach (var ex in ae.Flatten().InnerExceptions)
-                        {
-                            //_logger.Fatal(ex.Message, ex);
-                            errorObserver.OnError(ex);
-                        }
-                    }
-                    else
-                    {
-                        //_logger.Fatal(t.Exception.Message, t.Exception);
-                        errorObserver.OnError(t.Exception);
-                    }
-                }, TaskContinuationOptions.OnlyOnFaulted);
+                onNext(v).ContinueWith(t => onError, TaskContinuationOptions.OnlyOnFaulted);
             };
             return source.Subscribe(action);
+        }
+
+        public static IDisposable Subscribe<T>(this IObservable<T> source, Func<T, Task> onNext)
+        {
+            return source.Subscribe<T>(onNext: onNext, onError: e => { });
         }
     }
 }
