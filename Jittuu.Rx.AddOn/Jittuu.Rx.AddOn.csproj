@@ -61,6 +61,7 @@
     <Compile Include="Observable.TaskSubscription.cs" />
     <Compile Include="Observable.WithLatest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Task.TimeoutAfter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
