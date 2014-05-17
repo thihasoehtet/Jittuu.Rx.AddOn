@@ -53,9 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IAsyncObserver`1.cs" />
     <Compile Include="Observable.CompleteWhen.cs" />
     <Compile Include="Observable.DelayComplete.cs" />
     <Compile Include="Observable.DelayError.cs" />
+    <Compile Include="Observable.DoAsync.cs" />
     <Compile Include="Observable.DoOnError.cs" />
     <Compile Include="Observable.RetryIf.cs" />
     <Compile Include="Observable.TaskSubscription.cs" />

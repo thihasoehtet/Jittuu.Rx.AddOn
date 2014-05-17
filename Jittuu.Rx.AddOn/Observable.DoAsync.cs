@@ -1,0 +1,24 @@
+﻿using System;
+using System.Reactive.Linq;
+
+namespace Jittuu.Rx.AddOn
+{
+    public static class ObservableDoAsync
+    {
+        public static IObservable<T> DoAsync<T>(this IObservable<T> source, IAsyncObserver<T> observer)
+        {            
+            return source.SelectMany(async value =>
+            {
+                try
+                {
+                    await observer.OnNextAsync(value);
+                }
+                catch (Exception ex)
+                {
+                    observer.OnError(ex);                    
+                }
+                return value;
+            });
+        }
+    }
+}
