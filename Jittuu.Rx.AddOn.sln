@@ -12,6 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{79714E
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jittuu.Rx.AddOn.Tests", "Jittuu.Rx.AddOn.Tests\Jittuu.Rx.AddOn.Tests.csproj", "{78C4EEBF-FA57-4768-8D5A-A9FE4347989B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -22,6 +24,10 @@ Global
 		{AD0D7D3F-4AB3-4D03-9487-BF0F3172A023}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD0D7D3F-4AB3-4D03-9487-BF0F3172A023}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD0D7D3F-4AB3-4D03-9487-BF0F3172A023}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78C4EEBF-FA57-4768-8D5A-A9FE4347989B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C4EEBF-FA57-4768-8D5A-A9FE4347989B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C4EEBF-FA57-4768-8D5A-A9FE4347989B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C4EEBF-FA57-4768-8D5A-A9FE4347989B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
