@@ -14,7 +14,7 @@ Add-on extensions for C# Reactive Extension and also available via [NuGet](http:
 * Observable.WithLatest
 * Observable.SubscribeAsync
 * Task.TimeoutAfter
-* TaskSubscription
+* TaskSubscription (Observable.SubscribeAsync)
 * IAsyncObserver
 * AsyncObserverBase
 * AnnonymousAsyncObserver
